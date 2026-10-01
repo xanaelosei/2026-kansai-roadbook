@@ -737,7 +737,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
     const DAYS=[
       {id:0,label:"总览",date:"",title:"预算与补位",color:"#3b82f6",locations:[]},
       {id:1,label:"D1",date:"12.3",title:"落地 · 京都夜色",color:"#3b82f6",locations:[
-        {name:"关西国际机场 KIX",lat:34.4347,lng:135.2440,type:"transport",time:"11:15",desc:"杭州 08:00 出发，预计 11:15 到达。",detail:"下机后：入境审查 → 行李 → Visit Japan Web / 海关 → 交通卡。先不买太多液体，回程集中买。",transit:"KIX→京都：首推 JR Haruka 特急到京都站，约 75-80 分钟；再换京都地铁乌丸线到四条站，步行到木屋町/锦一带。",official:"https://www.kansai-airport.or.jp/en/explorekansai/osaka/21536",from:"杭州萧山国际机场 T4"},
+        {name:"关西国际机场 KIX",lat:34.4347,lng:135.2440,type:"transport",time:"11:15",desc:"杭州 08:00 出发，预计 11:15 到达。",detail:"下机后：入境审查 → 行李 → Visit Japan Web / 海关。✅ HARUKA 已在 HopeGoo 购好（KRW 18,560 ≈ ¥92/人），按订单页指引凭护照在 JR 西日本绿色窗口或自动售票机取票/兑换。先不买太多液体，回程集中买。",transit:"已购 HARUKA（HopeGoo）：T1 到达 → 步行 B1 层关西空港站（5-8 分钟）→ 取票 → 4 号站台乘 HARUKA 直达京都站（约 75-80 分钟）。官方窗口全价：自由席 ¥2,850 / 指定席 ¥3,640，本次网购更划算。京都站 → 地铁乌丸线四条站 → 步行到木屋町/锦一带。",official:"https://www.kansai-airport.or.jp/en/explorekansai/osaka/21536",from:"杭州萧山国际机场 T4"},
         {name:"Hotel Traveltine Kyoto Kiyamachi",lat:35.0005,lng:135.7685,type:"hotel",time:"14:00",desc:"京都两晚 base（木屋町）。先寄行李，15:00 后入住。",detail:"酒店在木屋町/锦市场圈，去鸭川、祇园、锦市场都步行可控。",transit:"京都站→酒店：地铁乌丸线到四条站，步行约 10-12 分钟；或京都站前乘 205 路到四条河原町方向再步行。",official:"https://traveltinehotelkyoto.com/access/",from:"关西国际机场 KIX"},
         {name:"锦市场 · 河原町购物补位",lat:35.0050,lng:135.7650,type:"shop",time:"15:15",desc:"补 Le Labo 京都桂花19、SHIRO、植村秀、Onitsuka Tiger。",detail:"Le Labo 建议现场确认城市限定库存；锦市场适合小吃/伴手礼，不要当正餐。",transit:"酒店步行到锦市场约 8-10 分钟，先走锦 → 新京极 → 河原町。",official:"https://www.kyoto-nishiki.or.jp/",from:"Hotel Traveltine Kyoto Kiyamachi",img:"nishiki"},
         {name:"鸭川 · 四条大桥日落",lat:35.0035,lng:135.7688,type:"sight",time:"16:50",desc:"12月初京都日落约 16:50-17:00，先站河岸别走远。",detail:"天气好时从四条大桥往北看鸭川三角洲方向最出片。",transit:"购物点步行到鸭川/四条大桥约 5-8 分钟。",from:"锦市场 · 河原町购物补位"},
@@ -750,14 +750,16 @@ svg.leaflet-image-layer.leaflet-interactive path {
         {name:"清水寺",lat:34.9949,lng:135.7850,type:"sight",time:"09:00",desc:"400 日元，早去避开旅行团；音羽瀑布排队快走。",detail:"12月初红叶尾声仍值得，奥之院平台视角最好。",transit:"从和服店步行约 8-12 分钟。",official:"https://www.kiyomizudera.or.jp/",from:"染匠きたむら · 和服预约",img:"kiyomizu"},
         {name:"三年坂 · 二年坂 · 八坂塔",lat:34.9975,lng:135.7820,type:"sight",time:"10:20",desc:"顺坡向下走，适合和服街拍。",detail:"人多时靠右侧走；八坂塔在法观寺前，不要只在大路拍。",transit:"清水寺出仁王门后走北边小路。",from:"清水寺",img:"ninenzaka"},
         {name:"高台寺 / 宁宁之道补位",lat:34.9998,lng:135.7802,type:"sight",time:"11:30",desc:"600 日元；若和服穿太久可不进，只在门口和坡道走走。",detail:"叶月/圆德院附近适合安静拍。",transit:"二年坂步行约 8 分钟。",official:"https://www.kodaiji.com/",from:"三年坂 · 二年坂 · 八坂塔"},
-        {name:"祇园午餐 · 京都简餐",lat:35.0038,lng:135.7750,type:"food",time:"12:30",desc:"选祇园四条/河原町一带，方便下午购物。",detail:"若想吃京都拉面/汤豆腐/鳗鱼饭，建议先 Google Maps 看当日排队。",transit:"高台寺步行回祇园约 10-12 分钟。",from:"高台寺 / 宁宁之道补位"},
+        {name:"建仁寺 · 寺庙优选（人多时替换高台寺）",lat:35.0014,lng:135.7747,type:"sight",time:"12:00",desc:"500 日元；祇园旁边的禅寺，风神雷神图屏风必看，人少、安静、出片。",detail:"清水寺/高台寺人潮难拍时来这里；冬季开放到 16:30 前后，最晚入场约提前 30 分钟。",transit:"与高台寺二选一：宁宁之道步行约 10-12 分钟，或祇园四条步行约 5 分钟。",official:"https://www.kenninji.jp/",from:"高台寺 / 宁宁之道补位"},
+        {name:"祇园午餐 · 天妇罗円堂（约到就升级）或简餐",lat:35.0038,lng:135.7750,type:"food",time:"12:30",desc:"米其林一星天妇罗「円堂」在八坂神社附近，午市门槛更低；约不到就祇园四条/河原町简餐。",detail:"预约入口：订位平台（Pocket Concierge 等）或电话，建议提前 2-4 周；以店家当日公告为准。",transit:"高台寺/建仁寺步行回祇园约 8-12 分钟。",reserve:"https://pocket-concierge.jp/en/regions/kyoto/",from:"高台寺 / 宁宁之道补位"},
         {name:"八坂神社 · 祇园白川",lat:35.0036,lng:135.7782,type:"sight",time:"14:00",desc:"白天补镜头，石屏小路人少一点。",detail:"如已昨夜来过，这里可只停留 20 分钟。",transit:"午餐后步行 6-10 分钟。",official:"https://www.yasaka-jinja.or.jp/",from:"祇园午餐 · 京都简餐"},
         {name:"京都购物补位：Le Labo / SHIRO / 植村秀",lat:35.0050,lng:135.7650,type:"shop",time:"15:00",desc:"集中补缺货和限定；Le Labo Kyoto Osmanthus 19 优先确认。",detail:"Onitsuka Tiger 37 码热门色号建议门店直接问库存。",transit:"祇园四条 → 河原町/锦一带步行约 10-15 分钟。",official:"https://www.lelabofragrances.com/store-search.html",from:"八坂神社 · 祇园白川"},
         {name:"锦市场 · 伴手礼",lat:35.0050,lng:135.7650,type:"food",time:"16:30",desc:"玉子烧、豆乳甜甜圈、京匠抹茶费南雪。",detail:"店铺打烊时间不一，16:30 前到更稳。",transit:"河原町购物点步行 5-8 分钟。",official:"https://www.kyoto-nishiki.or.jp/",from:"京都购物补位：Le Labo / SHIRO / 植村秀"},
-        {name:"伏见稻荷大社（白天补位）",lat:34.9671,lng:135.7727,type:"sight",time:"18:00",desc:"若D1未去，晚间或Day3早晨补；不必登顶也可。",detail:"千本鸟居下段+四辻视野已经很值。",transit:"京阪本线祇园四条 → 伏见稻荷站，约 18-22 分钟。",official:"https://inari.jp/",from:"锦市场 · 伴手礼",img:"inari"}
+        {name:"伏见稻荷大社（白天补位）",lat:34.9671,lng:135.7727,type:"sight",time:"18:00",desc:"若D1未去，晚间或Day3早晨补；不必登顶也可。",detail:"千本鸟居下段+四辻视野已经很值。",transit:"京阪本线祇园四条 → 伏见稻荷站，约 18-22 分钟。",official:"https://inari.jp/",from:"锦市场 · 伴手礼",img:"inari"},
+        {name:"京都站 拉面小路 · 新派拉面补位",lat:34.9858,lng:135.7588,type:"food",time:"19:45",desc:"京都站 10 楼「拉面小路」集中各家名店，京都新派/背脂系任选，回程顺路。",detail:"伏见稻荷回来正好；怕排队的先在门口食券机买券。晚饭吃太饱可跳过。",transit:"京阪本线伏见稻荷 → 东福寺换 JR 奈良线 → 京都站，约 20-25 分钟；站内直通 10 楼。",from:"伏见稻荷大社（白天补位）"}
       ]},
       {id:3,label:"D3",date:"12.5",title:"京都骑行 · 移动大阪",color:"#a855f7",locations:[
-        {name:"Blue Bottle Coffee 南禅寺店",lat:35.0115,lng:135.7945,type:"food",time:"08:45",desc:"早餐/咖啡，之后就近取车。",detail:"避开 10 点后亲子/旅行团高峰。",transit:"酒店 → 地铁东西线蹴上站，约 18-22 分钟。",official:"https://bluebottlecoffee.com/cafes",from:"Hotel Traveltine Kyoto Kiyamachi"},
+        {name:"Blue Bottle Coffee 南禅寺店",lat:35.0115,lng:135.7945,type:"food",time:"08:45",desc:"早餐/咖啡，之后就近取车。",detail:"避开 10 点后亲子/旅行团高峰。想试巷子系早餐可换：三条·Smart Coffee（昭和23年老铺热蛋糕，08:00 营业）。",transit:"酒店 → 地铁东西线蹴上站，约 18-22 分钟（Smart Coffee 则到三条京阪站）。",official:"https://bluebottlecoffee.com/cafes",from:"Hotel Traveltine Kyoto Kiyamachi"},
         {name:"南禅寺",lat:35.0111,lng:135.7939,type:"sight",time:"09:30",desc:"水路阁必看；冬季开放到 16:10 左右。",detail:"方丈庭园需票，普通游览水路阁+参道已足够。",transit:"Blue Bottle 步行约 5-8 分钟。",official:"https://nanzenji.or.jp/",from:"Blue Bottle Coffee 南禅寺店"},
         {name:"永观堂",lat:35.0125,lng:135.7889,type:"sight",time:"10:15",desc:"红叶尾声，若有兴致入内；否则门口即走。",detail:"12月初仍可能残红，注意 16:00 停止入场。",transit:"南禅寺骑行约 5 分钟。",official:"https://www.eikando.or.jp/",from:"南禅寺"},
         {name:"哲学之道",lat:35.0250,lng:135.7920,type:"sight",time:"10:50",desc:"永观堂 → 银阁寺方向的北段最好骑。",detail:"12月树影干净，人多时推行更安全。",transit:"永观堂骑行约 6-8 分钟。",from:"永观堂"},
@@ -803,18 +805,18 @@ svg.leaflet-image-layer.leaflet-interactive path {
       return `
         <div class="grid">
           <div class="ovcard"><div class="k">日期</div><div class="v">12.03 - 12.07</div><p>5天4晚，京都2晚 + 大阪2晚。</p></div>
-          <div class="ovcard"><div class="k">已记录开销（2人）</div><div class="v">机票 ¥5043</div><p>酒店 ¥1754：京都 ¥990 / 2晚，大阪 ¥767 / 2晚。</p></div>
+          <div class="ovcard"><div class="k">已记录开销（2人）</div><div class="v">机票 ¥5043</div><p>酒店 ¥1754：京都 ¥990 / 2晚，大阪 ¥767 / 2晚。交通已购：HARUKA 关西空港→京都 ¥92/人（HopeGoo 出票，KRW 18,560）。</p></div>
           <div class="ovcard"><div class="k">交通原则</div><div class="v">公共交通优先</div><p>机场线、JR、地铁、京阪/南海为主。导航按钮一律走 Google Maps 公交模式。</p></div>
-          <div class="ovcard"><div class="k">预约优先级</div><div class="v">和服 > USJ Express</div><p>和服5500日元需信用卡预约；USJ指定日期并看马里奥区入场方式。</p></div>
+          <div class="ovcard"><div class="k">预约优先级</div><div class="v">和服 > USJ > 円堂</div><p>和服5500日元需信用卡预约；USJ指定日期并看马里奥区入场方式；米其林天妇罗「円堂」午市提前 2-4 周订位。</p></div>
         </div>
         <div class="sec"><h2>必须提前处理</h2><span>越早越好</span></div>
         <div class="card"><h3>1. 12.7 KIX 提前出发</h3><p>你原计划 9 点出发，但 12:15 起飞且要买 Chanel/Le Labo。建议 07:30 出发，08:45-09:00 到机场。Le Labo 限定以店内库存为准，KIX Duty Free 线上当前搜不到 Le Labo 商品，不能依赖线上确认。</p></div>
-        <div class="card"><h3>2. 和服 + USJ</h3><p>染匠きたむら用官网预约日历；USJ 官网确认 12.6 票价、开园时间和马里奥区 Timed Entry / Standby Entry。Express Pass 看预算，不要只买票不看区域入场。</p></div>
+        <div class="card"><h3>2. 和服 + USJ</h3><p>染匠きたむら用官网预约日历；USJ 官网确认 12.6 票价、开园时间和马里奥区 Timed Entry / Standby Entry。Express Pass 看预算，不要只买票不看区域入场。米其林一星天妇罗「円堂」走订位平台或电话，午市更容易约。HARUKA 已购（HopeGoo ¥92），到机场直接取票。</p></div>
         <div class="card"><h3>3. 预算空白建议</h3><p>门票、交通未记录。可先按“USJ 门票+Express、京都/大阪市内交通、KIX 往返、和服、餐饮”五项补记，别把免税购物混进交通。</p></div>
         <div class="sec"><h2>官方/交通速链</h2><span>出发前复核</span></div>
         <div class="card"><div class="meta"><span class="chip type sight">机场</span><span class="chip type transport">铁路</span><span class="chip type shop">免税</span></div><h3>KIX · Haruka · Rapi:t · Duty Free</h3><p>关西机场官方页面、JR Haruka、南海 Rapi:t、KIX Duty Free 品牌页。</p><div class="acts"><a class="btn official" href="https://www.kansai-airport.or.jp/en/explorekansai/osaka/21536" target="_blank" rel="noopener">机场交通</a><a class="btn official" href="http://www.nankai.co.jp/en_railway/rapit" target="_blank" rel="noopener">Rapi:t</a><a class="btn official" href="https://www.kixdutyfree.jp/en/perfumes/" target="_blank" rel="noopener">KIX香水</a><a class="btn" href="https://www.kansai-airport.or.jp/en/shop-and-dine/shop" target="_blank" rel="noopener">KIX商店</a></div></div>
         <div class="card"><h3>USJ 官方票务与 Express</h3><p>12.6 需指定日期；Express Pass 与马里奥区域入场分开确认。</p><div class="acts"><a class="btn official" href="https://www.usj.co.jp/web/en/us/tickets" target="_blank" rel="noopener">门票</a><a class="btn official" href="https://www.usj.co.jp/web/en/us/tickets/express-pass" target="_blank" rel="noopener">Express</a><a class="btn" href="https://www.usj.co.jp/web/en/us" target="_blank" rel="noopener">官网</a></div></div>
-        <div class="card"><h3>购物清单</h3><p>京都：Blue Bottle 杯、SHIRO、植村秀、Onitsuka Tiger、Le Labo 桂花19。<br>KIX：Le Labo 东京限定、Chanel 美妆/香水。<br>伴手礼：hanare 京匠抹茶费南雪。</p></div>`;
+        <div class="card"><h3>购物清单</h3><p>京都：Blue Bottle 杯、SHIRO、植村秀、Onitsuka Tiger、Le Labo 桂花19。<br>KIX：Le Labo 东京限定、Chanel 美妆/香水。<br>伴手礼：hanare 京匠抹茶费南雪。<br>京都玩法参考：小红书《我把京都三天两夜蒸馏成一套skill》@一只小黄堡。</p></div>`;
     }
     function cardHTML(day,loc,idx){
       const prev=day.locations[idx-1];
